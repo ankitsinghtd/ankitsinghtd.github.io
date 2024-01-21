@@ -1,0 +1,150 @@
+main {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+}
+
+main::before {
+  position: fixed;
+  content: "";
+  top: 0;
+  right: 25%;
+  height: 100%;
+  width: 2px;
+  background-color: #000000;
+}
+
+.profile-section {
+  flex: 1;
+  display: flex;
+  margin-top: 10vh;
+  text-align: center;
+  order: 2;
+  flex-direction: column;
+}
+
+.profile-image {
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  max-width: 150px;
+}
+
+.profile-section section {
+  margin-bottom: 4vh;
+}
+
+svg, a {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.left-section {
+  flex: 3;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-section p {
+  margin-bottom: 0;
+}
+
+.left-section p + p {
+  margin-top: 0;
+}
+
+.other-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+#tryhackme-badge {
+  margin-bottom: 20px !important;
+}
+
+.github-stats-image {
+  margin-top: 20px;
+}
+
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.updates-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.max-width-1 {
+  max-width: 80vw;
+}
+
+.max-width-2 {
+  max-width: 60vw;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.updates-posts {
+  padding: 18px;
+  background-color: #dbe0e0;
+  margin-top: 23px;
+  position: relative;
+}
+
+.updates-posts {
+  display: flex;
+  margin: 25px;
+}
+
+.updates-posts img {
+  width: 200px;
+  height: 170px;
+}
+
+.updates-posts-content {
+  align-self: center;
+  padding: 25px;
+}
+
+.updates-posts-content a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Media queries*/
+
+@media (max-width: 900px) {
+  main::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: auto;
+    background-color: #000000;
+    z-index: -1;
+  }
+
+  .profile-section {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .left-section {
+    display: flex;
+  }
+}
