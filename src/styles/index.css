@@ -14,12 +14,10 @@ main::before {
 }
 
 .profile-section {
-  flex: 1;
-  display: flex;
+  width: 25%;
+  float: left;
   margin-top: 10vh;
   text-align: center;
-  order: 2;
-  flex-direction: column;
 }
 
 .profile-image {
@@ -34,33 +32,28 @@ main::before {
   margin-bottom: 4vh;
 }
 
-svg, a {
+svg,
+a {
   width: 20px;
   height: 20px;
   vertical-align: middle;
 }
 
-.left-section {
-  flex: 3;
-  width: 75%;
+.other-info {
+  width: 25%;
+  float: left;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.left-section p {
+.other-info p {
   margin-bottom: 0;
 }
 
-.left-section p + p {
+.other-info p + p {
   margin-top: 0;
-}
-
-.other-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
 }
 
 #tryhackme-badge {
@@ -72,9 +65,11 @@ svg, a {
 }
 
 .middle-section {
+  width: 50%;
+  float: left;
   display: flex;
   flex-direction: column;
-  flex: 3;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
 }
@@ -127,24 +122,57 @@ svg, a {
 /*Media queries*/
 
 @media (max-width: 900px) {
-  main::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    width: auto;
-    background-color: #000000;
-    z-index: -1;
+  main {
+    flex-direction: column;
   }
 
   .profile-section {
-    width: 100%;
-    margin-top: 0;
+    order: 1;
   }
 
-  .left-section {
-    display: flex;
+  .other-info {
+    order: 2;
+  }
+
+  .middle-section {
+    order: 3;
+  }
+
+  .profile-section,
+  .other-info,
+  .middle-section {
+    padding: 20px;
+    border-bottom: 2px solid #000000;
+    width: 100%;
+    float: none;
+  }
+
+  .profile-section,
+  .other-info,
+  .middle-section {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .middle-section {
+    background-color: #ffffff;
+  }
+
+  .updates-posts {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .updates-posts img {
+    width: 100%;
+    height: auto;
+  }
+
+  .updates-posts-content {
+    padding: 15px;
+  }
+
+  main::before {
+    display: none;
   }
 }
