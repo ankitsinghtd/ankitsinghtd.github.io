@@ -51,6 +51,14 @@ function addUpdate(imageSrc, postUrl, postTitle, postDescription, postDate) {
 }
 
 addUpdate(
+  "/src/img/peh.png",
+  "https://www.linkedin.com/posts/ankitsinghtd_tcmsecurity-activity-7233089642110017536-QuI_?utm_source=share&utm_medium=member_desktop",
+  "Practical Ethical Hacker !!!",
+  "I completed the Practical Ethical Hacking course on TCM Security",
+  "24 August 2024"
+);
+
+addUpdate(
   "/src/img/CEH_badge.png",
   "https://www.linkedin.com/posts/ankitsinghtd_ceh-activity-7150399815833505792-MMvl?utm_source=share&utm_medium=member_desktop",
   "I passed CEH certification exam",
